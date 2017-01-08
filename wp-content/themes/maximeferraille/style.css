@@ -1,0 +1,600 @@
+/*
+Theme Name: Maxime Ferraille Theme
+Theme URI: http://maxime-ferraille.fr/themes
+Author: Maxime Ferraille
+Author URI: http://maxime-ferraille.fr
+Description: A wordpress theme create for my own portfolio
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+You can use this theme privately or comercially, it's free !
+*/
+html, body, header {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+	background-color: #f8f8f8;
+  height: 100%;
+  color : #000000;
+}
+
+
+.container {
+	font-family: 'Lato', sans-serif;
+	color:#000000;
+	font-size: 0.875em;
+	width: 80%;
+	margin: 0 auto;
+}
+
+
+header {
+  position: fixed;
+  z-index: 9999; /* Si on indique pas l'empilement avec les autres block, les progress qui sont en relative passe au dessus et c'est franchement pas sympathique*/
+	width: 100%;
+	background-color: #485a6c;
+	color:#f8f8f8;
+	height: 60px;
+	padding: 0;
+	-webkit-box-shadow: 1px 0 1px 1px rgba(0,0,0,0.4);
+	box-shadow: 1px 0 1px 1px rgba(0,0,0,0.4);
+}
+
+header .container {
+	width: 80%;
+	height: 60px;
+
+}
+
+header nav {
+	display: inline-block;
+	float: right;
+}
+
+header h1 {
+	color: #F8F8F8;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5em;
+	line-height: 60px;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+header ul li {
+	display: inline-block;
+	position: relative;
+	width: 125px;
+	line-height: 65px;
+	text-align: center;
+}
+
+.menu-trigger {
+  display:none;
+}
+
+.menu a {
+	text-decoration: none;
+	color:#b9b9b9;
+	font-family:'Roboto',sans-serif, arial;
+	font-size: 1.25em;
+}
+
+.menu a:hover{
+  color : #f8f8f8;
+}
+
+h1 {
+  font-family:'Raleway', sans-serif,arial;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2.1875em;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-family: 'Lato',sans-serif;
+  font-weight: 700;
+  font-size: 1.875em;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Lato',arial,sans-serif;
+  font-weight: 400;
+  font-size: 1.375em;
+}
+
+strong {
+  font-weight: 700;
+}
+
+h3 {
+  font-family: 'Raleway',arial,sans-serif;
+  font-weight: 700;
+  font-size: 1.3125em;
+}
+
+.line {
+  width: 5%;
+	border-bottom: 2px solid black;
+}
+
+.home {
+  color : #f8f8f8;
+  /* Utilisation rapide et simple de la flexbox sur une colonne pour centrer notre text */
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* Paramètre de notre image de fond */
+  background-image: url('img/background1.png');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.home h1 {
+  font-size: 3em;
+}
+
+.home p {
+  text-align: center;
+  font-family: 'Lato',sans-serif,arial;
+  font-weight: 400;
+  font-size: 1.375em;
+  margin-top: 40px;
+  line-height: 30px;
+  width: 20%;
+}
+
+.home .line {
+  width: 5%;
+	border-bottom: 2px solid #f0f0f0;
+}
+
+
+/* Partie qui suis je */
+.about {
+  margin-top: 122px;
+
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about p {
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 115px;
+}
+
+/* Bannière avec citation */
+.banner {
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: 52%;
+  background-image: url('img/banner.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  margin-bottom: 122px;
+}
+
+.banner p, h3 {
+  color : #f8f8f8;
+}
+
+.banner p {
+  font-size: 2.1875em;
+  font-family: 'Lato',arial,sans-serif;
+  font-weight: 100;
+  text-align: center;
+}
+
+.banner h3 {
+  align-self: flex-end;
+  padding-right: 200px;
+}
+
+
+/* Compétences */
+.global {
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.skills, .description {
+  width: 40%;
+  margin: 25px;
+}
+
+/* Description coméptence */
+
+.description h2 {
+  margin-bottom: 22px;
+}
+
+.description p {
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.description a {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  flex-direction: column;
+  padding: none;
+  margin : auto;
+  width: 50%;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+
+.btn:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+
+.btn:hover {
+  background-color: #6FC6FF;
+}
+
+.fa-download:after{
+  content: 'Télécharger';
+  font-family: 'Lato',arial,sans-serif;
+  font-size: 1em;
+  padding-left: 20px;
+}
+
+
+/* Mise en page des progress bar */
+.skills span {
+    top: -30px;
+    left: 2%;
+    position: relative;
+    font-size: 1.4em;
+    font-family: 'Roboto',sans-serif;
+    color: #fff;
+}
+
+progress {
+    background-color: #f3f3f3;
+    border: 0;
+    height: 2.5em;
+    width: 100%;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #e0eaf0;
+}
+
+progress::-webkit-progress-value {
+    background-color: #329ad1;
+}
+
+progress::-moz-progress-bar {
+    background-color: #329ad1;
+}
+
+
+
+footer {
+  line-height: 30px;
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;*/
+
+  margin-top: 30px;
+	width: 100%;
+	background-color: #353535;
+	color:#f8f8f8;
+	height: 80px;
+	padding: 0;
+
+  text-align: center;
+
+  background-image: url('img/footer.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+footer p{
+  font-family: 'Lato',sans-serif;
+  font-weight: 100;
+  font-size: 1.4375em;
+}
+
+footer a {
+  text-decoration: none;
+  font-family: 'Lato',sans-serif;
+  font-weight: 100;
+  font-size: 1.15em;
+  color: #f0f0f0;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Page portfolio */
+.portfolio-nav {
+  padding-top: 122px;
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.portfolio-nav p {
+  margin-top:40px;
+  margin-bottom: 80px;
+}
+
+.portfolio {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    margin-top: 80px;
+}
+
+.project-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  padding-bottom: 50px;
+}
+
+.project-list section {
+  position:relative;
+  width: 30%;
+  line-height: 30%;
+  text-align: center;
+  margin: 10px;
+}
+
+.project-list section:hover h2 {
+  opacity: 1;
+}
+
+.project-list section:hover {
+  background-color: black;
+}
+
+.project-list section:hover img {
+    opacity: 0.8;
+}
+
+.project-list h2 {
+    position:absolute;
+    top:50%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+    color: #f0f0f0;
+  }
+
+.project-list img {
+    width: 100%;
+    height: 100%;
+}
+
+.project-page {
+  padding-top: 122px;
+}
+
+.project-title .line{
+  margin-bottom: 40px;
+}
+
+.project-title a {
+  font-family: 'Lato',sans-serif;
+  font-weight: 100;
+  color:;
+}
+
+.project-title {
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+
+@media screen and (max-width: 1400px) {
+  .banner p {
+    font-size: 1.825em;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1244px) {
+
+    .container {
+      width: 95%;
+    }
+
+    p {
+      font-size: 1.275em;
+    }
+}
+
+@media screen and (max-width: 1084px) {
+  h2 {
+    font-size: 1.775em;
+  }
+}
+
+
+@media screen and (max-width: 1025px) {
+  .container, header .container {
+    width: 100%;
+    /*min-width: 700px;*/
+    padding: 0px 20px;
+  }
+
+  h2 {
+    font-size: 1.65em;
+  }
+}
+
+@media screen and (max-width: 961px) {
+  .banner p {
+    font-size: 1.725em;
+  }
+  .banner h3 {
+    font-size: 1.215em;
+    padding-right: 100px;
+  }
+
+  p {
+    font-size: 1.23em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .fa-download:after{
+    content: none;
+  }
+  .description a {
+    width: 30%;
+  }
+
+  .banner p {
+    font-size: 1.425em;
+  }
+
+  .banner h3 {
+    font-size: 1.115em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+  .project-list section {
+  width: 35%;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+
+  /* On fait un déroulement de menu*/
+  .menu-trigger{
+    display:block;
+    display: inline-block;
+    position: relative;
+    width: 125px;
+    line-height: 60px;
+    text-align: center;
+    cursor:pointer;
+  }
+  nav ul li {
+    display:block;
+    border-top:1px #4a4a4a solid;
+    background-color: #485a6c;
+        opacity: 0.98;
+  }
+   nav ul {
+    display:none;
+  }
+
+  nav ul li:last-child {
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    -webkit-box-shadow: 0px 2px 1px 1px rgba(0,0,0,0.4);
+    box-shadow: 0px 2px 1px 1px rgba(0,0,0,0.4);
+  }
+  /*Fin*/
+
+  .banner {
+    height: 42%;
+  }
+  .banner p {
+    font-size: 1.2em;
+  }
+
+  .project-list section {
+  width: 40%;
+  }
+}
+
+@media (max-width:480px){
+    .project-list section {
+    width: 100%;
+    }
+}
