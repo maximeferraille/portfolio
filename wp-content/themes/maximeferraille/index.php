@@ -30,24 +30,27 @@
         <div class="description">
           <h2><?php echo rwmb_meta('skills_subtitle'); ?></h2>
           <?php echo rwmb_meta('skills_description'); ?>
-          <!-- <p>Passionné depuis toujours par les nouvelles technologies, j'ai apprit en auto-didacte mais aussi par lors de mes études différentes technologies pour la création de site web.<br>
-          <br>
-          Je suis actuellement à la rehcerche d'un stage où je pourrai metter mes compétences à disposition.<br>Pour voir en oeuvre l'application de mes compétences je vous invite à vous diriger vers l'onglet Portfolio<br>
-          <br>
-          Si vous voulez plus d’information vous pouvez télécharger mon CV.</p> -->
 
+          <?php
+          $files = rwmb_meta( 'download_cv' );
 
-          <a href="#" download class="btn"><i class="fa fa-download" aria-hidden="true"></i></a>
+          if ( !empty( $files ) ) {
+            foreach ( $files as $file ) {
+            echo "<a href='{$file['url']}' class='btn' download title='{$file['title']}'><i class='fa fa-download' aria-hidden='true'></i></a><br />";
+            }
+          }
+           ?>
+
         </div>
 
         <div class="skills">
-          <progress value="80" max="100"></progress><span>JavaScript/jQuery</span><br>
-          <progress value="70" max="100"></progress><span>HTML5/CSS3</span><br>
-          <progress value="60" max="100"></progress><span>PHP</span><br>
+          <progress value="70" max="100"></progress><span>JavaScript/jQuery</span><br>
+          <progress value="90" max="100"></progress><span>HTML5/CSS3</span><br>
+          <progress value="90" max="100"></progress><span>PHP</span><br>
           <progress value="70" max="100"></progress><span>JAVA</span><br>
-          <progress value="60" max="100"></progress><span>MySQL</span><br>
-          <progress value="80" max="100"></progress><span>Laravel</span><br>
-          <progress value="80" max="100"></progress><span>Wordpress</span><br>
+          <progress value="80" max="100"></progress><span>MySQL</span><br>
+          <progress value="30" max="100"></progress><span>Laravel</span><br>
+          <progress value="65" max="100"></progress><span>Wordpress</span><br>
         </div>
     </div>
   </div>
