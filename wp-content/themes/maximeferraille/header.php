@@ -18,9 +18,11 @@
             <a  class="menu-trigger">Menu</a>
           <?php
             $defaults = array (
+              'theme_location ' => 'header',
+              'menu' => '',
               'container' => false,
-              'theme_location' => 'primary-menu',
-              'menu_class' => 'menu'
+              'menu_class' => 'menu',
+              'fallback_cb' => false
             );
 
             wp_nav_menu($defaults);
@@ -33,7 +35,7 @@
 						<li><a href="index.html">Accueil</a></li>
 						<li><a href="portfolio.html">Portfolio</a></li>
 						<li><a href="contact.html">Contact</a></li>
-				  </ul> 
+				  </ul>
           -->
 			</nav>
 		</div>

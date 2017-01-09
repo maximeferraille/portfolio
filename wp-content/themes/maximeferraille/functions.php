@@ -1,6 +1,5 @@
 <?php
 
-add_theme_support('menus');
 add_theme_support('post-thumbnails');
 
 function wpmf_theme_styles(){ //wpmf => prefix for my function, wp for wordpress & mf for maxime ferraille
@@ -24,7 +23,7 @@ add_action( 'wp_enqueue_scripts', 'wpmf_theme_js' );
 
 add_action( 'after_setup_theme', 'register_my_menu' );
 function register_my_menu() {
-  register_nav_menu( 'primary', __( 'Primary Menu', 'primary-menu' ) );
+  register_nav_menu('header', 'Header Menu');
 }
 
 add_filter( 'rwmb_meta_boxes', 'index_meta_boxes' );
