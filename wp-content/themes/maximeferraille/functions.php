@@ -22,7 +22,10 @@ function wpmf_theme_js() {
 }
 add_action( 'wp_enqueue_scripts', 'wpmf_theme_js' );
 
-
+add_action( 'after_setup_theme', 'register_my_menu' );
+function register_my_menu() {
+  register_nav_menu( 'primary', __( 'Primary Menu', 'primary-menu' ) );
+}
 
 add_filter( 'rwmb_meta_boxes', 'index_meta_boxes' );
 function index_meta_boxes( $meta_boxes ) {
@@ -120,6 +123,11 @@ function project_meta_boxes( $meta_boxes ) {
                 'id'   => 'project_link_name',
                 'name' => __( 'Project Link Name', 'textdomain' ),
                 'type' => 'text',
+            ),
+            array(
+              'id' => 'project_picture',
+              'name'=> __('Project picture(s)','texdomain'),
+              'type' => 'file_upload',
             ),
         ),
     );
