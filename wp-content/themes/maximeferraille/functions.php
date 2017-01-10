@@ -132,4 +132,20 @@ function project_meta_boxes( $meta_boxes ) {
     );
     return $meta_boxes;
 }
+
+add_filter( 'rwmb_meta_boxes', 'portfolio_meta_boxes' );
+function portfolio_meta_boxes( $meta_boxes ) {
+    $meta_boxes[] = array(
+        'title'      => __( 'For the Portfolio', 'textdomain' ),
+        'post_types' => 'page',
+        'fields'     => array(
+            array(
+              'id' => 'portfolio_description',
+              'name' => __('Portfolio Description', 'textdomain'),
+              'type' => 'wysiwyg',
+            ),
+          ),
+    );
+    return $meta_boxes;
+}
  ?>

@@ -12,7 +12,7 @@
   <body>
     <header>
 			<div class="container">
-				<h1><?php bloginfo('name'); ?></h1>
+				<a href="<?php echo home_url(); ?>" class="title-nav"><h1><?php bloginfo('name'); ?></h1></a>
 
 				<nav class="menu">
             <a  class="menu-trigger">Menu</a>

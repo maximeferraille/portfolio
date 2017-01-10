@@ -10,7 +10,7 @@
   <div class="portfolio-nav">
     <h1>Mes projets</h1>
     <div class="line"></div>
-    <p>Description here</p>
+    <p><?php the_content(); ?></p>
   </div>
 
   <div class="project-list">
