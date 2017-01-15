@@ -474,6 +474,23 @@ footer a:hover {
   margin-bottom: 40px;
 }
 
+.project-picture {
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 40px;
+
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.project-picture img {
+  width: 45%;
+  margin: 20px;
+}
+
 
 @media screen and (max-width: 1400px) {
   .banner p {
@@ -494,6 +511,10 @@ footer a:hover {
     p {
       font-size: 1.275em;
     }
+
+    .home p {
+      width: 35%;
+    }
 }
 
 @media screen and (max-width: 1084px) {
@@ -506,7 +527,6 @@ footer a:hover {
 @media screen and (max-width: 1025px) {
   .container, header .container {
     width: 100%;
-    /*min-width: 700px;*/
     padding: 0px 20px;
   }
 
@@ -598,10 +618,96 @@ footer a:hover {
   .project-list section {
   width: 40%;
   }
+
+  .skills, .description {
+    width: 100%
+  }
+
+  .description h2 {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .wrapper, .description {
+    margin-top: 0;
+  }
+
+  .description p {
+    text-align: left;
+  }
+
+  .home p {
+    width: 60%;
+  }
+
+  footer p {
+    font-size: 1.2em;
+  }
 }
 
-@media (max-width:480px){
+@media screen and (max-width:480px){
+
+    header h1 {
+      font-size: 1.2em;
+    }
+
+    .home h1 {
+      font-size: 2.5em;
+    }
+
     .project-list section {
     width: 100%;
     }
+
+    .home p {
+      width: 70%;
+    }
+
+    .banner p {
+      width: 80%;
+    }
+
+    .banner h3 {
+      padding-right: 50px;
+      padding-top: 10px;
+    }
+
+    footer p {
+      font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width:340px){
+
+  .container {
+    padding: 0;
+  }
+
+  header h1 {
+    font-size: 1em;
+  }
+
+  .menu a {
+    font-size: 1.03em;
+  }
+
+  h1 {
+    font-size: 1.7em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .description h2 {
+    font-size: 1.2em;
+  }
+
+  .skills span {
+    font-size: 1.1em;
+  }
+
+  .skills {
+    margin: 5px;
+  }
 }
