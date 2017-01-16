@@ -129,6 +129,11 @@ function project_meta_boxes( $meta_boxes ) {
                 'type' => 'text',
             ),
             array(
+                'id'   => 'project_technologies',
+                'name' => __( 'Project Technologies', 'textdomain' ),
+                'type' => 'text',
+            ),
+            array(
               'id' => 'project_picture',
               'name'=> __('Project picture(s)','texdomain'),
               'type' => 'file_upload',
