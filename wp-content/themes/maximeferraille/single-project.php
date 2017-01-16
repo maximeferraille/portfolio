@@ -6,6 +6,7 @@
         <div class="project-title">
           <h1><?php echo get_post_field('project_title'); ?></h1>
           <div class="line"></div>
+          <h2><?php echo get_post_field('project_type') ?></h2>
           <?php echo get_post_field('project_description'); ?>
           <a href="<?php echo get_post_field('project_link'); ?>"><?php echo get_post_field('project_link_name'); ?></a>
         </div>

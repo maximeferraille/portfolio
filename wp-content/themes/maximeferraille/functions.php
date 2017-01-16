@@ -109,6 +109,11 @@ function project_meta_boxes( $meta_boxes ) {
               'type' => 'text',
           ),
           array(
+            'id'   => 'project_type',
+            'name' => __( 'Project Type', 'textdomain' ),
+            'type' => 'text',
+          ),
+          array(
               'id'   => 'project_description',
               'name' => __( 'Project description', 'textdomain' ),
               'type' => 'wysiwyg',
