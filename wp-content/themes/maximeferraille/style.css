@@ -479,11 +479,9 @@ footer a:hover {
   display: -ms-flexbox;
   justify-content: center;
   align-items: center;
-
+  flex-direction: column;
   margin-bottom: 40px;
 
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .project-picture img {
